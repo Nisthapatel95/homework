@@ -3,11 +3,33 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "company_management": {
+    "companyManagementSystem": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -17,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/company_management",
+            "outputPath": "dist/company-management-system",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +91,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "company_management:build:production"
+              "browserTarget": "companyManagementSystem:build:production"
             },
             "development": {
-              "browserTarget": "company_management:build:development"
+              "browserTarget": "companyManagementSystem:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +102,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "company_management:build"
+            "browserTarget": "companyManagementSystem:build"
           }
         },
         "test": {
@@ -105,6 +127,6 @@
     }
   },
   "cli": {
-    "analytics": "a6e6eb79-1309-41b6-9518-7ffe09f94293"
+    "analytics": "882171ef-7ef4-4fe9-8b0d-b6c35f78a137"
   }
 }
