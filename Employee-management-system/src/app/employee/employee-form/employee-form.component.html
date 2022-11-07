@@ -1,0 +1,66 @@
+<div class="p-2 navbar-light bg-background h-100 pt-2 border p-4 rounded">
+    <div class="p-4">
+        <div>
+            <form class="row pt-3 border  p-4 rounded" style="width: 600px;" [formGroup]="employeeForm">
+                <div class="mb-3 col-12">
+                    <input type="text" class="form-control" formControlName="firstName" placeholder="Employee FirstName"
+                        [ngClass]="{ 'is-invalid': isSubmitted && formValidation['firstName'].errors }">
+                    <div class="invalid-feedback" *ngIf="isSubmitted && formValidation['firstName'].errors"
+                        class="invalid-feedback">
+                        <div *ngIf="formValidation['firstName'].errors['required']">
+                            First Name is required
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 col-12">
+                    <input type="text" class="form-control" formControlName="lastName" placeholder="Employee LastName"
+                        [ngClass]="{ 'is-invalid': isSubmitted && formValidation['lastName'].errors }">
+                    <div class="invalid-feedback" *ngIf="isSubmitted && formValidation['lastName'].errors"
+                        class="invalid-feedback">
+                        <div *ngIf="formValidation['lastName'].errors['required']">
+                            last Name is required
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 col-12">
+                    <input type="text" class="form-control" formControlName="emailId" placeholder="Employee EmailId"
+                        [ngClass]="{ 'is-invalid': isSubmitted && formValidation['emailId'].errors }">
+                    <div class="invalid-feedback" *ngIf="isSubmitted && formValidation['emailId'].errors"
+                        class="invalid-feedback">
+                        <div *ngIf="formValidation['emailId'].errors['required']">
+                            Email is required
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 col-12">
+                    <input type="text" class="form-control" appMaskingNumber formControlName="mobileNo"
+                        placeholder="Employee Mobile No"
+                        [ngClass]="{ 'is-invalid': isSubmitted && formValidation['mobileNo'].errors }">
+                    <div class="invalid-feedback" *ngIf="isSubmitted && formValidation['mobileNo'].errors"
+                        class="invalid-feedback">
+                        <div *ngIf="formValidation['mobileNo'].errors['required']">
+                            Mobile No is required
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 col-12">
+                    <input type="text" class="form-control" formControlName="salary" placeholder="Employee Salary"
+                        [ngClass]="{ 'is-invalid': isSubmitted && formValidation['salary'].errors }">
+                    <div class="invalid-feedback" *ngIf="isSubmitted && formValidation['salary'].errors"
+                        class="invalid-feedback">
+                        <div *ngIf="formValidation['salary'].errors['required']">
+                            Salary is required
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <button type="reset" class="btn btn-cancle text-white me-2" (click)="cancleData()">Cancel</button>
+                    <button type="submit" class="btn btn-save text-white" (click)="confirmData()">Save</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
