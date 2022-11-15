@@ -4,6 +4,17 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
+
+    input,
+    select{
+      
+   
+       &:focus{
+           border:1px solid $primary;
+           box-shadow: none;
+       }
+    }
 }
 button {
     border: none;
@@ -14,10 +25,16 @@ button {
    .image-wrap{
     height:600px;
     overflow-x: auto;
+   
    }
    
  }
 
-//  ::placeholder{
-//     font-size: 12px;
-//  }
+
+ .text{
+    font-size: 12px;
+ }
+ .card{
+    border-radius: 0.201rem
+ }
+ 
