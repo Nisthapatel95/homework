@@ -6,123 +6,131 @@
       </div>
 
       <!-- Registration form  -->
-      <div class="col-lg-6 col-md-6  bg-white p-2 image-wrap col-sm-12 ">
+      <div class="col-lg-6 col-md-6  bg-white p-2 image-wrap card col-sm-12 ">
 
+       
+          <form>
+            <h2 class=" text-nowrap  my-2">Create your Account</h2>
+            <span>Already have an account?<strong class="text-primary"> sign in</strong></span>
+            <!-- profile -->
+            <div class="  my-4 row profile-pic">
+              <label for="file-input">
+                  <div class="position-relative">
+                      <img src="../../../assets/Vector.png" alt="" class="">
+                      <label
+                          class="btn-gradient profile-btn rounded-circle position-absolute text-center">
+                          <i class="fa-solid fa-plus text-white"></i>
+                      </label>
+                  </div> 
 
-        <form>
-          <h2 class=" text-nowrap  my-2">Create your Account</h2>
-          <span>Already have an account?<strong class="text-primary"> sign in</strong></span>
-          <!-- profile -->
-          <div class="profile-pic position-relative p-3 ">
-            <img src="../../../assets/Vector.png" alt="">
-            <div class="position-absolute text-dark top-100 ms-1 translate-middle logo">
-                <img src="../../../assets/Vector (2).png" alt="">
-              </div>
-            <!-- <input type="file" id="img" (change)="($event)" formControlName="profilePhoto"
-              style="display: none;position: relative;">
-            <label for="img"> <img src="../../../assets/Vector (2).png" id="img" class="img-fluid"></label> -->
+              </label>
+              <!-- <input type="file" id="file-input"> -->
           </div>
-          <!-- first Row -->
-          <div class="row p-2 ">
-            <div class="col-md-6 col-lg-6 col-xl-6 m-0 ">
-              <!-- firstname input -->
-              <div class="form-outline">
-                <label class="form-label" for="firstname">FirstName <span class="text-danger">*</span></label>
-                <input type="text" id="firstname" class="form-control " placeholder="Enter Your FirstName"
-                  formControlName="firstname" />
+            <!-- first Row -->
+             <div class="row  p-2 text">
+              <div class="col-md-6 col-lg-6 col-xl-6   ">
+                <!-- firstname input -->
+                 <div class="form-outline">
+                  <label class="form-label fw-bold fs-12px" for="firstname">FirstName <span class="text-danger">*</span></label>
+                  <input type="text" id="firstname" class="form-control text   " placeholder="Enter Your FirstName"
+                    formControlName="firstname" />
+                    <span class="p-2">Nistha</span>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-6 m-0">
-              <!-- lastname input -->
-              <div class="form-outline">
-                <label class="form-label" for="lastname">LastName <span class="text-danger">*</span></label>
-                <input type="text" id="lastname" class="form-control " placeholder="Enter lastname"
-                  formControlName="lastname" />
+              <!-- <span>nistha</span> -->
+              <div class="col-md-6 col-lg-6 col-xl-6 "> 
+                <!-- lastname input -->
+                <div class="form-outline">
+                  <label class="form-label fw-bold" for="lastname">LastName <span class="text-danger">*</span></label>
+                  <input type="text" id="lastname" class="form-control text" placeholder="Enter lastname"
+                    formControlName="lastname" />
+                </div>
+              </div> 
+            </div> 
+            <!-- second  Row -->
+            <div class="row p-2 text">
+              <div class="col-md-6 col-lg-6 col-xl-6  ">
+                <!-- Email input -->
+                <div class="form-outline">
+                  <label class="form-label fw-bold" for="firstname">Email Address<span class="text-danger">*</span></label>
+                  <input type="text" id="firstname" class="form-control text " placeholder="Enter Your Email Address"
+                    formControlName="firstname" />
+                </div>
               </div>
-            </div>
-          </div>
-          <!-- second  Row -->
-          <div class="row p-2">
-            <div class="col-md-6 col-lg-6 col-xl-6  m-0">
-              <!-- Email input -->
-              <div class="form-outline">
-                <label class="form-label" for="firstname">Email Address<span class="text-danger">*</span></label>
-                <input type="text" id="firstname" class="form-control " placeholder="Enter Your Email Address"
-                  formControlName="firstname" />
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-6 m-0">
-              <!-- Password input -->
-              <div class="form-outline">
-                <div class="position-relative">
-                  <label class="form-label" for="password">Password<span class="text-danger">*</span> </label>
+              <div class="col-md-6 col-lg-6 col-xl-6 ">
+                <!-- Password input -->
+                <div class="form-outline">
+                  <div class="position-relative">
+                    <label class="form-label fw-bold" for="password">Password<span class="text-danger">*</span> </label>
 
-                  <input type="password" class="form-control " placeholder="Enter password"
-                    formControlName="password" />
+                    <input type="password" class="form-control text " placeholder="Enter password"
+                      formControlName="password" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- third row  Row -->
-          <div class="row p-2">
-            <div class="col-md-6 col-lg-6 col-xl-6 m-0">
-              <!-- Phone Number input -->
-              <div class="form-outline">
-                <label class="form-label" for="phonenumber">Phone Number<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" placeholder="Enter Phone number"
-                  formControlName="phonenumber" />
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-6 m-0">
-              <!-- Select User Type input -->
-              <label class="form-label " for="password">Select User Type<span class="text-danger ">*</span> </label>
-              <select class="form-select " aria-label="Default select example" formControlName="usertype">
-                <option selected>Select User Type</option>
-                <option value="Studio"> owner</option>
-                <option value="Artist">Artist</option>
-                <option value="General">General</option>
-              </select>
-            </div>
-          </div>
-          <!-- fourth row  Row -->
-          <div class="row p-2">
-            <div class="col-md-6 col-lg-6 col-xl-6  m-0">
-              <!-- phoneno input -->
-              <div class="form-outline">
-                <label class="form-label" for="Phoneno">Select Country<span class="text-danger">*</span> </label>
-                <input type="text" id="Country" class="form-control " placeholder="Country" formControlName="Country" />
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-6  m-0">
-              <div class="row">
-                <div class="col-lg-6">
-                  <label class="form-label" for="state">Select State<span class="text-danger">*</span>
-                  </label>
-                  <select class="form-select" formControlName="state">
-                    <option selected>--- State ---</option>
-                    <option value="Daman">Daman</option>
-                    <option value="Gujarat">Gujarat</option>
-                    <option value="UP">UP</option>
-                  </select>
-                </div>
-                <div class="col-lg-6 ">
-                  <label class="form-label" for="city">Select City<span class="text-danger">*</span> </label>
-                  <select class="form-select" formControlName="city">
-                    <option selected>--- City ---</option>
-                    <option value="Daman">Daman</option>
-                    <option value="Gujarat">Gujarat</option>
-                    <option value="UP">UP</option>
-                  </select>
+            <!-- third row  Row -->
+            <div class="row p-2 text">
+              <div class="col-md-6 col-lg-6 col-xl-6 ">
+                <!-- Phone Number input -->
+                <div class="form-outline">
+                  <label class="form-label fw-bold" for="phonenumber">Phone Number<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control text" placeholder="Enter Phone number"
+                    formControlName="phonenumber" />
                 </div>
               </div>
+              <div class="col-md-6 col-lg-6 col-xl-6  ">
+                <!-- Select User Type input -->
+                <label class="form-label  fw-bold " for="password">Select User Type<span class="text-danger  ">*</span> </label>
+                <select class="form-select text" aria-label="Default select example" formControlName="usertype">
+                  <option selected >Select User Type</option>
+                  <option value="Studio"> owner</option>
+                  <option value="Artist">Artist</option>
+                  <option value="General">General</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="p-3 text-nowrap ">Note:</div>
-          <div class="p-3">
-            <button class="p-1 rounded px-3 mx-1 ">sign in</button>
-          </div>
-        </form>
-
+            <!-- fourth row  Row -->
+            <div class="row p-2 text">
+              <div class="col-md-6 col-lg-6 col-xl-6  ">
+                <!-- Country input -->
+                <div class="form-outline">
+                  <label class="form-label fw-bold " for="Phoneno">Select Country<span class="text-danger text">*</span> </label>
+                  <div class="form-control p-0 ">
+                    <img src="../../../assets/Frame 5.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-6 col-xl-6  ">
+                <div class="row ">
+                  <div class="col-lg-6">
+                    <label class="form-label fw-bold " for="state">Select State<span class="text-danger text">*</span>
+                    </label>
+                    <select class="form-select text" formControlName="state">
+                      <option selected >--- State ---</option>
+                      <option value="Daman">Daman</option>
+                      <option value="Gujarat">Gujarat</option>
+                      <option value="UP">UP</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6  ">
+                    <label class="form-label fw-bold" for="city">Select City<span class="text-danger">*</span> </label>
+                    <select class="form-select text" formControlName="city">
+                      <option selected>--- City ---</option>
+                      <option value="Daman">Daman</option>
+                      <option value="Gujarat">Gujarat</option>
+                      <option value="UP">UP</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-3 text-nowrap ">Note:</div>
+            <div class="p-3">
+              <button class="p-1 rounded px-5 mx-1 text-white">sign in</button>
+            </div>
+          </form>
+       
 
       </div>
       <!-- End: Registration form  -->
